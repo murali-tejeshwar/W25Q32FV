@@ -1,0 +1,16 @@
+&spi0 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&spi0_pins>;
+
+	status = "okay";
+
+	w25q32fv: w25q32fv@0 {
+		compatible = "winbond,w25q32fv";
+		spi-max-frequency = <100000>;
+		reg = <0x0>;
+		size = <4194304>;
+		sectorsize = <4096>;
+		pagesize = <256>;
+		address-width = <24>;
+	};
+};
